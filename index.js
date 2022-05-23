@@ -3,6 +3,13 @@ const nameToWork = document.querySelector('.title__name');
 const professionToContact = document.querySelector('.title__profession');
 const mainTapElementForMobile = document.querySelector('.tap__here');
 
+function getScreenHeight () {
+  document.documentElement.style.setProperty('--js-height', `${window.innerHeight - 0.01}px`)
+}
+
+window.addEventListener('resize', getScreenHeight);
+getScreenHeight();
+
 helloToAbout.addEventListener('mouseover', () => {
   helloToAbout.textContent = 'Обо мне';
 });

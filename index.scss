@@ -30,7 +30,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: var(--js-height);
   background-color: #333333;
   overflow-x: hidden;
 }
