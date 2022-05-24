@@ -266,3 +266,21 @@ body {
     }
   }
 }
+
+.to__home {
+  position: fixed;
+  top: 3vmax;
+  right: 5vmax;
+  font-size: 3rem;
+  font-family: serif;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: #ffffff 0 0 1rem;
+  animation: to-home 1s linear infinite;
+
+  @keyframes to-home {
+    0% {transform: scale(1);};
+    50% {transform: scale(1.2);};
+    100% {transform: scale(1);};
+  }
+}
