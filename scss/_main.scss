@@ -1,0 +1,108 @@
+.main__photo {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 114.28vh 100vh;
+  background-position: 95%;
+  background-repeat: no-repeat;
+  background-image: url(./img/anatol2.png);
+  z-index: -1;
+  animation: start-main 2s linear 1;
+
+  @keyframes start-main {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @media (max-width: 1000px) {
+    background-position: 5%;
+  }
+
+  @media (max-width: 650px) {
+    background-position: center;
+  }
+}
+
+.title__block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 10vh 10vw;
+  animation: start-title 1.5s linear 1;
+
+    @keyframes start-title {
+      0% {transform: translateX(-200%);}
+      50% {transform: translateX(-200%);}
+      100% {transform: translateX(0);}
+    }
+
+  @media (max-width: 1000px) {
+    padding: 10vh 5vw;
+  }
+
+  .title__hello, .title__name, .title__profession {
+    font-size: 10rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    white-space: nowrap;
+
+    &:hover {
+      padding-left: 5%;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 8rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 7rem;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 6rem;
+    }
+  }
+
+  .title__name {
+    color: #0091ff;
+    width: 60rem;
+
+    @media (max-width: 600px) {
+      width: 75vw;
+    }
+
+    @media (max-width: 500px) {
+      width: 90vw;
+    }
+  }
+
+  .title__profession {
+    color: #00ff00;
+  }
+}
+
+.tap__here {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  text-shadow: #333333 0 0 1rem;
+  animation: bounce-tap-here 1s linear infinite;
+
+  @keyframes bounce-tap-here {
+    0% {transform: translateY(0) translateX(-50%);}
+    60% {transform: translateY(-30%) translateX(-50%);}
+    75% {transform: translateY(-30%) translateX(-50%);}
+    100% {transform: translateY(0) translateX(-50%);}
+  }
+
+  @media (hover:hover) {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,153 @@
+.about__body {
+  height: 100%;
+}
+
+.about__photo {
+  position: fixed;
+  width: 100vw;
+  height: 78.125vw;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./img/Anatol.jpg);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  transform: translateY(78.125vw);
+
+  .about__text {
+    font-family: 'Museo Sans Cyrl 100', Arial, Helvetica, sans-serif;
+    font-size: calc(1.8vh + 0.4vw);
+    line-height: 1.5;
+    text-align: center;
+    padding: 5vmax 5vw;
+  }
+
+  .about__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 5vmax 5vw;
+
+    .slider__left-button, .slider__right-button {
+      font-size: 5rem;
+      opacity: 0.5;
+      padding: 0 1vh;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:active {
+        font-size: 4.7rem;
+        user-select: none; 
+      }
+    }
+
+    .slider__area {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      column-gap: 1vh;
+      width: 125vh;
+      padding: 1vh;
+      overflow-x: hidden;
+
+      @media (max-width: 1350px) {
+        width: 94vh;
+      }
+
+      @media (max-width: 1050px) {
+        width: 63vh;
+      }
+
+      @media (max-width: 700px) {
+        width: 32vh;
+      }
+
+      .slide {
+        flex: none;
+        width: 30vh;
+        height: 30vh;
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition-duration: 0.5s;
+        cursor: pointer;
+      }
+
+      .slide1 {
+        background-image: url(./img/certificate1.jpg);
+      }
+
+      .slide2 {
+        background-image: url(./img/certificate2.jpg);
+      }
+
+      .slide3 {
+        background-image: url(./img/certificate3.jpg);
+      }
+
+      .slide4 {
+        background-image: url(./img/certificate4.jpg);
+      }
+
+      .slide5 {
+        background-image: url(./img/certificate5.jpg);
+        background-size: 100%;
+      }
+
+      .slide6 {
+        background-image: url(./img/certificate6.jpg);
+        background-size: 100%;
+      }
+
+      .slide7 {
+        background-image: url(./img/certificate7.jpg);
+        background-size: 100%;
+      }
+
+      .slide8 {
+        background-image: url(./img/certificate8.jpg);
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+.to__home, .modal__close {
+  position: fixed;
+  top: 3vmax;
+  right: 5vmax;
+  font-size: 3rem;
+  font-family: serif;
+  font-weight: 900;
+  color: #ffffff;
+  cursor: pointer;
+  text-shadow: #ffffff 0 0 1rem;
+  animation: to-home 1s linear infinite;
+
+  @keyframes to-home {
+    0% {transform: scale(1);};
+    50% {transform: scale(1.2);};
+    100% {transform: scale(1);};
+  }
+}
+
+.modal__slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: #333333;
+  background-position: center;
+  background-repeat: no-repeat;
+}
