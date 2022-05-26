@@ -32,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    column-gap: 1.5vmax;
     width: 100vw;
     padding: 5vmax 5vw;
 
@@ -122,21 +123,21 @@
   }
 }
 
-.to__home, .modal__close {
+.modal__close {
   position: fixed;
   top: 3vmax;
   right: 5vmax;
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: serif;
   font-weight: 900;
   color: #ffffff;
   cursor: pointer;
   text-shadow: #ffffff 0 0 1rem;
-  animation: to-home 1s linear infinite;
+  animation: modal-close 1s linear infinite;
 
-  @keyframes to-home {
+  @keyframes modal-close {
     0% {transform: scale(1);};
-    50% {transform: scale(1.2);};
+    50% {transform: scale(1.1);};
     100% {transform: scale(1);};
   }
 }
