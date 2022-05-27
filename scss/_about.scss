@@ -20,13 +20,27 @@
   background-color: #333333;
   transform: translateY(78.125vw);
 
+  @media (min-width: 1200px) {
+    transform: translateY(100vh);
+  }
+
   .about__text {
     font-family: 'Museo Sans Cyrl 100', Arial, Helvetica, sans-serif;
     font-weight: 100;
     font-size: calc(1.8vh + 0.4vw);
-    line-height: 1.5;
-    text-align: center;
-    padding: 5vmax 5vw;
+    line-height: 4rem;
+    text-align: left;
+    padding: 5vmax 10vw;
+
+    b {
+      font-size: calc(1.8vh + 0.8vw);
+      font-family: 'Museo Sans Cyrl 300', Arial, Helvetica, sans-serif;
+      font-weight: 300;
+    }
+
+    .about__text__title {
+      font-size: calc(1.8vh + 1vw);
+    }
   }
 
   .about__slider {
@@ -133,7 +147,6 @@
   font-weight: 900;
   color: #ffffff;
   cursor: pointer;
-  text-shadow: #ffffff 0 0 1rem;
   animation: modal-close 1s linear infinite;
 
   @keyframes modal-close {
