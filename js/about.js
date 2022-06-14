@@ -8,7 +8,7 @@ let x = 0;
 
 rightButton.addEventListener('click', () => {
   
-  if (x < 700) {
+  if (x < 900) {
     x += 103.5;
     slides.forEach(slide => {
       slide.style.transform = `translateX(-${x}%)`;
@@ -32,11 +32,7 @@ slides.forEach(slide => {
     modalWindowSlide.classList.remove('off');
     modalWindowSlideClose.classList.remove('off');
     modalWindowSlide.style.backgroundImage = `url(./img/certificate${index}.jpg)`;
-    if (index < 5) {
-      modalWindowSlide.style.backgroundSize = '60vmin';
-    } else {
-      modalWindowSlide.style.backgroundSize = '80vmin';
-    }
+    modalWindowSlide.style.backgroundSize = '90vmin';
   })
 })
 
